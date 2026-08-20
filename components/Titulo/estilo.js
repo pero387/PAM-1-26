@@ -4,10 +4,11 @@ const estilo = StyleSheet.create({
   box: {
     backgroundColor: '#000',
     alignItems: 'center',
-    padding: 10,
+    justifyContent: 'space-between'
   },
   texto:{
     fontSize: 28,
+    padding: 10,
     color: '#61dafb'
   }
 });
