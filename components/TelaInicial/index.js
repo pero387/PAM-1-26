@@ -5,9 +5,10 @@ import ListaComidas from '../ListaComidas';
 
 export default function TelaInicial() {
   return (
-    <View style={{flex: 1, backgroundColor: '#f2f2f2'}}>
-      <StatusBar barStyle="light-content" backgroundColor="#ff6b6b" />
+    <View style={{flex: 1, backgroundColor: '#000000'}}>
+      <StatusBar barStyle="light-content" backgroundColor="#9b7e20" />
       <Cabecalho title="Comidas do Dia" />
+      
       <ListaComidas />
     </View>
   )

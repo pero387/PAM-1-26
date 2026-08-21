@@ -1,9 +1,14 @@
 import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
+  container:{
+    flex: 1,
+    backgroundColor: '#e6dfdf',  
+    
+  },
   card: {
     flexDirection: 'row',
-    backgroundColor: '#eeeeee',
+    backgroundColor: '#997e7e',
     borderRadius: 10,
     marginVertical: 8,
     marginHorizontal: 16,
@@ -11,8 +16,8 @@ export default StyleSheet.create({
     elevation: 2,
   },
   image: {
-    width: 50,
-    height: 50,
+    width: 96,
+    height: 96,
   },
   content: {
     flex: 1,
@@ -21,10 +26,10 @@ export default StyleSheet.create({
   },
   name: {
     fontSize: 18,
-    fontWeight: '200',
+    fontWeight: '600',
     marginBottom: 4
   },
   desc: {
-    color: '#000000'
+    color: '#444'
   }
 });

@@ -1,11 +1,11 @@
 import React from 'react';
 import { View, Text } from 'react-native';
-import estilo from './estilo';
 
 export default function Cabecalho({ title }) {
   return (
-    <View style={estilo.container}>
-      <Text style={estilo.title}>{title}</Text>
+    <View style={{ backgroundColor: '#69949e', paddingTop: 10, paddingBottom: 10, alignItems: 'center' }}>
+      <Text style={{ color: '#cacca8', fontSize: 24, fontWeight: '50' }}>{title}</Text>
     </View>
   )
 }
+ 

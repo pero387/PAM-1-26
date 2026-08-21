@@ -1,19 +1,24 @@
 import { StyleSheet } from 'react-native';
+import React from 'react';
 
-export default StyleSheet.create({
-  container: {
-    backgroundColor: '#ff6b6b',
-    paddingTop: 40,
-    paddingBottom: 16,
+
+  return StyleSheet.create({
+    container: {
+      backgroundColor: '#9da839',
+      paddingTop: 10,
+      paddingBottom: 10,
     alignItems: 'center',
     shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
+    shadowOffset: { width: 5, height: 2 },
     shadowOpacity: 0.2,
     elevation: 3,
   },
   title: {
-    color: '#fff',
+    color: '#cacca8',
     fontSize: 24,
-    fontWeight: '700'
+    fontWeight: '50'
+  
   }
+
+  
 });
