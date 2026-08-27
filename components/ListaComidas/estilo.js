@@ -1,35 +1,12 @@
 import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
-  container:{
+  container: {
     flex: 1,
-    backgroundColor: '#e6dfdf',  
-    
+    backgroundColor: '#f9f3eb',
   },
-  card: {
-    flexDirection: 'row',
-    backgroundColor: '#997e7e',
-    borderRadius: 10,
-    marginVertical: 8,
-    marginHorizontal: 16,
-    overflow: 'hidden',
-    elevation: 2,
-  },
-  image: {
-    width: 96,
-    height: 96,
-  },
-  content: {
+  lista: {
     flex: 1,
-    padding: 12,
-    justifyContent: 'center'
+    backgroundColor: '#f9f3eb',
   },
-  name: {
-    fontSize: 18,
-    fontWeight: '600',
-    marginBottom: 4
-  },
-  desc: {
-    color: '#444'
-  }
 });
