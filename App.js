@@ -8,20 +8,7 @@ let rodadaAtual = 1;
 let pontuacaoTotal = 0;
 let numeroSorteado = null;
 
-const formulario = document.getElementById("formulario-jogo");
-const campoNumero = document.getElementById("numero-escolhido");
-const botaoSortear = document.getElementById("botao-sortear");
-const botaoReiniciar = document.getElementById("botao-reiniciar");
-const rodada = document.getElementById("rodada");
-const visorNumero = document.getElementById("numero-sorteado");
-const ultimoNumero = document.getElementById("ultimo-numero");
-const pontosRodada = document.getElementById("pontos-rodada");
-const total = document.getElementById("pontuacao-total");
-const mensagemValidacao = document.getElementById("mensagem-validacao");
-const mensagemResultado = document.getElementById("mensagem-resultado");
-const resultadoFinal = document.getElementById("resultado-final");
-const pontuacaoFinal = document.getElementById("pontuacao-final");
-const mensagemFinal = document.getElementById("mensagem-final");
+
 const estilo = StyleSheet.create({
   boxTitulo: {
     height: 80,
@@ -48,8 +35,8 @@ const estilo = StyleSheet.create({
   },
 
   boxNumero: {
-    borderColor: '#13b0c5',
-    backgroundColor: '#13b0c5',
+    borderColor: '#92d0d8',
+    backgroundColor: '#9cc9cf',
     borderWidth: 5,
     height: 150,
     width: 150,
@@ -89,6 +76,15 @@ const Titulo = () => {
     </View>
   );
 };
+const NumeroEscolhido = ({ numero }) => {
+  return (
+    <View style={estilo.boxNumero}>
+      <Text style={estilo.numero}>
+        {numero}
+      </Text>
+    </View>
+  );
+};
 
 const TelaInicial = () => {
   const [numeroSorteado, setNumeroSorteado] = useState(0);
@@ -106,11 +102,7 @@ const TelaInicial = () => {
         Toque no botão e veja quem é o vencedor de 1 à 100
       </Text>
 
-      <View style={estilo.boxNumero}>
-        <Text style={estilo.numero}>
-          {numeroSorteado}
-        </Text>
-      </View>
+      <NumeroEscolhido numero={numeroSorteado} />
 
       <View style={estilo.boxBotao}>
         <Button
@@ -118,6 +110,7 @@ const TelaInicial = () => {
           onPress={gerarNumero}
           color="#1f4f66"
         />
+
       </View>
 
     </View>
