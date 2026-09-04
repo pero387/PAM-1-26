@@ -1,6 +1,27 @@
 import React, { useState } from 'react';
 import { View, Text, Button, StyleSheet } from 'react-native';
 
+const TOTAL_RODADAS = 5;
+const PONTUACAO_MAXIMA = TOTAL_RODADAS * 100;
+
+let rodadaAtual = 1;
+let pontuacaoTotal = 0;
+let numeroSorteado = null;
+
+const formulario = document.getElementById("formulario-jogo");
+const campoNumero = document.getElementById("numero-escolhido");
+const botaoSortear = document.getElementById("botao-sortear");
+const botaoReiniciar = document.getElementById("botao-reiniciar");
+const rodada = document.getElementById("rodada");
+const visorNumero = document.getElementById("numero-sorteado");
+const ultimoNumero = document.getElementById("ultimo-numero");
+const pontosRodada = document.getElementById("pontos-rodada");
+const total = document.getElementById("pontuacao-total");
+const mensagemValidacao = document.getElementById("mensagem-validacao");
+const mensagemResultado = document.getElementById("mensagem-resultado");
+const resultadoFinal = document.getElementById("resultado-final");
+const pontuacaoFinal = document.getElementById("pontuacao-final");
+const mensagemFinal = document.getElementById("mensagem-final");
 const estilo = StyleSheet.create({
   boxTitulo: {
     height: 80,
@@ -11,7 +32,7 @@ const estilo = StyleSheet.create({
   },
 
   tituloCabecalho: {
-    color: '#0fc3d4',
+    color: '#0fd478',
     fontWeight: '700',
     fontSize: 20,
   },
@@ -47,7 +68,7 @@ const estilo = StyleSheet.create({
 
   numero: {
     fontSize: 80,
-    color: '#fff',
+    color: '#271212',
   },
 
   boxBotao: {
